@@ -1,0 +1,460 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    
+}
+
+/* Padding Umum untuk Seluruh Konten */
+body {
+    margin: 0; /* Menghilangkan margin default */
+    padding: 20px; /* Padding di seluruh halaman */
+    font-family: Arial, sans-serif; /* Font untuk keseluruhan teks */
+    line-height: 1.6; /* Jarak antar baris */
+    color: #333; /* Warna teks */
+    background-color: #f4f4f4; /* Warna latar belakang */
+}
+
+/* Contoh padding tambahan untuk section */
+section {
+    padding: 40px 20px; /* Padding atas/bawah dan kiri/kanan untuk setiap section */
+    margin-bottom: 20px; /* Margin bawah antar section */
+    background-color: white; /* Warna latar belakang section */
+    border-radius: 8px; /* Sudut membulat untuk section */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Efek bayangan untuk memberikan kedalaman */
+}
+
+
+/* Gaya untuk Navigation Bar */
+nav {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: space-between; /* Ruang antar elemen */
+    align-items: center; /* Pusatkan secara vertikal */
+    background-color: #333; /* Warna latar belakang */
+    padding: 15px 30px; /* Padding atas dan bawah, kiri dan kanan */
+    position: sticky; /* Agar tetap di atas saat scroll */
+    top: 0; /* Posisi atas */
+    z-index: 1000; /* Pastikan di atas konten lain */
+}
+
+.logo img {
+    height: 50px; /* Tinggi logo */
+}
+
+.nav-links {
+    list-style: none; /* Menghilangkan bullet point */
+    display: flex; /* Menggunakan flexbox untuk menyusun item menu */
+    margin: 0; /* Menghilangkan margin */
+    padding: 0; /* Menghilangkan padding */
+}
+
+.nav-links li {
+    margin: 0 20px; /* Margin antar item menu */
+}
+
+.nav-links a {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: white; /* Warna teks */
+    font-size: 18px; /* Ukuran font */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transisi saat hover */
+}
+
+.nav-links a:hover {
+    color: #ff6600; /* Warna teks saat hover */
+    transform: scale(1.1); /* Efek zoom saat hover */
+}
+
+/* Efek dropdown */
+.nav-links li:hover .dropdown {
+    display: block; /* Tampilkan dropdown saat hover */
+}
+
+/* Dropdown */
+.dropdown {
+    display: none; /* Sembunyikan dropdown secara default */
+    position: absolute; /* Posisi absolut untuk dropdown */
+    background-color: #444; /* Warna latar belakang dropdown */
+    padding: 10px; /* Padding untuk dropdown */
+    border-radius: 5px; /* Sudut membulat */
+}
+
+.dropdown a {
+    display: block; /* Tampilkan item dropdown sebagai blok */
+    padding: 8px 12px; /* Padding untuk item dropdown */
+    color: white; /* Warna teks dropdown */
+    transition: background-color 0.3s ease; /* Transisi saat hover */
+}
+
+.dropdown a:hover {
+    background-color: #555; /* Warna latar belakang saat hover pada dropdown */
+}
+
+/* Gaya untuk Tentang Kami */
+#about {
+    padding: 60px 20px; /* Padding untuk jarak atas dan bawah */
+    background-color: #f9f9f9; /* Warna latar belakang */
+    text-align: center; /* Pusatkan teks */
+}
+
+#about h2 {
+    font-size: 36px; /* Ukuran font untuk judul */
+    margin-bottom: 40px; /* Margin bawah judul */
+}
+
+.about-container {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    align-items: center; /* Pusatkan secara vertikal */
+    flex-wrap: wrap; /* Agar item dapat membungkus jika terlalu banyak */
+    justify-content: center; /* Pusatkan secara horizontal */
+}
+
+.about-image {
+    flex: 1; /* Memberikan ruang yang sama pada gambar */
+    max-width: 400px; /* Maksimal lebar gambar */
+    margin: 15px; /* Margin antar item */
+}
+
+.about-image img {
+    width: 100%; /* Lebar gambar penuh */
+    height: auto; /* Tinggi otomatis */
+    border-radius: 10px; /* Sudut membulat */
+    transition: transform 0.3s ease; /* Transisi saat hover */
+}
+
+.about-image img:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.about-text {
+    flex: 1; /* Memberikan ruang yang sama pada teks */
+    max-width: 600px; /* Maksimal lebar teks */
+    margin: 15px; /* Margin antar item */
+}
+
+.about-text .logo img {
+    height: 50px; /* Tinggi logo */
+    margin-bottom: 20px; /* Margin bawah logo */
+}
+
+.about-text p {
+    font-size: 18px; /* Ukuran font untuk deskripsi */
+    color: #555; /* Warna teks deskripsi */
+    line-height: 1.6; /* Jarak antar baris */
+    margin-bottom: 20px; /* Margin bawah deskripsi */
+}
+
+
+header {
+    background-image: url('logo.jpeg'); /* Gambar latar belakang */
+    background-size: cover; /* Menutupi seluruh area */
+    background-position: center; /* Pusatkan gambar */
+    height: 80vh; /* Tinggi bagian header */
+    display: flex; /* Gunakan flexbox */
+    justify-content: center; /* Pusatkan konten secara horizontal */
+    align-items: center; /* Pusatkan konten secara vertikal */
+    color: white; /* Warna teks */
+    text-align: center; /* Pusatkan teks */
+    position: relative; /* Untuk penempatan elemen pseudo */
+}
+
+/* Gaya untuk Beranda */
+/* Gaya untuk Beranda */
+#home {
+    position: relative; /* Posisi relatif untuk menempatkan konten */
+    height: 100vh; /* Tinggi penuh layar */
+    background: url('background-image.jpg') no-repeat center center/cover; /* Gambar latar belakang */
+    overflow: hidden; /* Menghindari overflow */
+}
+
+.hero-container {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    flex-direction: column; /* Susun konten secara vertikal */
+    justify-content: center; /* Pusatkan konten secara vertikal */
+    align-items: center; /* Pusatkan konten secara horizontal */
+    height: 100%; /* Tinggi penuh */
+    color: white; /* Warna teks */
+    text-align: center; /* Pusatkan teks */
+    animation: fadeIn 1.5s ease; /* Animasi muncul */
+}
+
+.hero-container h1 {
+    font-size: 48px; /* Ukuran font untuk judul */
+    margin-bottom: 20px; /* Margin bawah judul */
+    animation: slideIn 1s ease; /* Animasi muncul dari samping */
+}
+
+.hero-container p {
+    font-size: 24px; /* Ukuran font untuk deskripsi */
+    margin-bottom: 30px; /* Margin bawah deskripsi */
+    animation: fadeInUp 1s ease; /* Animasi muncul dari bawah */
+}
+
+.cta-button {
+    background-color: #ff6600; /* Warna tombol */
+    color: white; /* Warna teks tombol */
+    padding: 15px 30px; /* Padding untuk tombol */
+    border-radius: 5px; /* Sudut membulat */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    font-size: 18px; /* Ukuran font tombol */
+    transition: background-color 0.3s ease; /* Transisi saat hover */
+}
+
+.cta-button:hover {
+    background-color: #e55b00; /* Warna tombol saat hover */
+}
+
+/* Gaya untuk gambar di beranda */
+.hero-image {
+    width: 80%; /* Lebar gambar */
+    max-width: 600px; /* Lebar maksimum */
+    height: auto; /* Tinggi otomatis untuk menjaga proporsi */
+    margin-top: 20px; /* Jarak atas untuk gambar */
+    animation: slideInUp 1s ease; /* Animasi masuk untuk gambar */
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Memulai dengan transparan */
+        transform: translateY(-20px); /* Muncul dari atas */
+    }
+    to {
+        opacity: 1; /* Menjadi terlihat */
+        transform: translateY(0); /* Menetap di tempat */
+    }
+}
+
+/* Animasi Slide In */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Muncul dari kiri */
+        opacity: 0; /* Memulai dengan transparan */
+    }
+    to {
+        transform: translateX(0); /* Menetap di tempat */
+        opacity: 1; /* Menjadi terlihat */
+    }
+}
+
+/* Animasi Fade In Up */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px); /* Muncul dari bawah */
+        opacity: 0; /* Memulai dengan transparan */
+    }
+    to {
+        transform: translateY(0); /* Menetap di tempat */
+        opacity: 1; /* Menjadi terlihat */
+    }
+}
+
+/* Animasi Slide In Up */
+@keyframes slideInUp {
+    from {
+        transform: translateY(100%); /* Muncul dari bawah */
+        opacity: 0; /* Memulai dengan transparan */
+    }
+    to {
+        transform: translateY(0); /* Menetap di tempat */
+        opacity: 1; /* Menjadi terlihat */
+    }
+}
+
+
+
+
+/* Gaya untuk Layanan Kami */
+#services {
+    padding: 60px 20px; /* Padding untuk jarak atas dan bawah */
+    background-color: #f9f9f9; /* Warna latar belakang */
+    text-align: center; /* Pusatkan teks */
+}
+
+#services h2 {
+    font-size: 36px; /* Ukuran font untuk judul */
+    margin-bottom: 40px; /* Margin bawah judul */
+}
+
+.services-container {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: center; /* Pusatkan konten secara horizontal */
+    flex-wrap: wrap; /* Agar item dapat membungkus jika terlalu banyak */
+}
+
+.service {
+    background-color: white; /* Warna latar belakang untuk setiap layanan */
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+    margin: 15px; /* Margin antar layanan */
+    overflow: hidden; /* Menghindari overflow pada gambar */
+    transition: transform 0.3s ease; /* Transisi saat hover */
+    width: 300px; /* Lebar layanan */
+}
+
+.service:hover {
+    transform: translateY(-10px); /* Efek angkat saat hover */
+}
+
+.service img {
+    width: 100%; /* Lebar gambar penuh */
+    height: auto; /* Tinggi otomatis */
+}
+
+.service h3 {
+    font-size: 24px; /* Ukuran font untuk judul layanan */
+    margin: 15px 0; /* Margin atas dan bawah judul */
+}
+
+.service p {
+    padding: 0 15px; /* Padding untuk deskripsi */
+    font-size: 16px; /* Ukuran font untuk deskripsi */
+    color: #555; /* Warna teks deskripsi */
+    margin-bottom: 20px; /* Margin bawah deskripsi */
+}
+
+
+@media (max-width: 768px) {
+    #contact form {
+        width: 100%; /* Memastikan form mengambil lebar penuh pada layar kecil */
+    }
+}
+#location {
+    background-color: #f1f1f1; /* Warna latar belakang lembut */
+    padding: 40px 20px; /* Padding untuk ruang di sekitar konten */
+    border-radius: 10px; /* Sudut membulat untuk kotak */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus */
+    text-align: center; /* Center text */
+    margin: 20px 0; /* Margin atas dan bawah */
+}
+
+#location h2 {
+    font-size: 24px; /* Ukuran font untuk judul */
+    margin-bottom: 20px; /* Jarak di bawah judul */
+}
+
+#location p {
+    font-size: 16px; /* Ukuran font untuk deskripsi */
+    margin-bottom: 20px; /* Jarak di bawah paragraf */
+}
+
+#location iframe {
+    width: 100%; /* Lebar penuh untuk peta */
+    height: 400px; /* Tinggi peta */
+    border: 0; /* Menghilangkan batas peta */
+    border-radius: 10px; /* Sudut membulat untuk peta */
+}
+
+@media (max-width: 768px) {
+    #location {
+        padding: 20px; /* Padding lebih kecil untuk layar kecil */
+    }
+
+    #location iframe {
+        height: 300px; /* Tinggi peta lebih kecil pada layar kecil */
+    }
+}
+
+
+footer {
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    .service-item img {
+        width: 80%;
+    }
+}
+.social-icons {
+    display: flex; /* Gunakan flexbox untuk tata letak ikon */
+    justify-content: center; /* Pusatkan ikon secara horizontal */
+    margin-top: 20px; /* Margin atas untuk jarak dari teks */
+}
+
+.icon {
+    color: #333; /* Warna ikon */
+    font-size: 30px; /* Ukuran ikon */
+    margin: 0 15px; /* Margin kiri dan kanan untuk jarak antar ikon */
+    transition: color 0.3s ease; /* Transisi saat hover */
+}
+
+.icon:hover {
+    color: #ff6600; /* Warna saat hover */
+}
+/* Media Queries untuk Responsif */
+@media (max-width: 768px) {
+    /* Gaya untuk layar kecil (tablet dan smartphone) */
+    
+    #home {
+        height: auto; /* Sesuaikan tinggi untuk perangkat kecil */
+        padding: 20px; /* Tambahkan padding */
+    }
+
+    .hero-container h1 {
+        font-size: 32px; /* Ukuran font lebih kecil untuk judul */
+    }
+
+    .hero-container p {
+        font-size: 18px; /* Ukuran font lebih kecil untuk deskripsi */
+    }
+
+    .cta-button {
+        padding: 10px 20px; /* Ukuran tombol lebih kecil */
+        font-size: 16px; /* Ukuran font tombol lebih kecil */
+    }
+
+    .hero-image {
+        width: 100%; /* Gambar lebar 100% pada layar kecil */
+        max-width: 100%; /* Lebar maksimum 100% */
+        height: auto; /* Tinggi otomatis untuk menjaga proporsi */
+    }
+
+    .nav-links li {
+        margin: 0 10px; /* Margin antar item menu lebih kecil */
+    }
+
+    .nav-links a {
+        font-size: 16px; /* Ukuran font lebih kecil untuk menu */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Gaya untuk layar sangat kecil (smartphone) */
+    
+    #home {
+        padding: 15px; /* Tambahkan padding lebih kecil */
+    }
+
+    .hero-container h1 {
+        font-size: 28px; /* Ukuran font lebih kecil untuk judul */
+    }
+
+    .hero-container p {
+        font-size: 16px; /* Ukuran font lebih kecil untuk deskripsi */
+    }
+
+    .cta-button {
+        padding: 8px 16px; /* Ukuran tombol lebih kecil */
+        font-size: 14px; /* Ukuran font tombol lebih kecil */
+    }
+
+    .nav-links {
+        flex-direction: column; /* Susun item menu secara vertikal */
+        align-items: center; /* Pusatkan item menu */
+    }
+
+    .nav-links li {
+        margin: 5px 0; /* Jarak antar item menu lebih kecil */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Ukuran font lebih kecil untuk menu */
+    }
+}
+
+
